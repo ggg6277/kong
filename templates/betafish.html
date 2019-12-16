@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block mytitle %}Beta Fish{% endblock %}
+{% block mybody %}
+<!--<div>
+    <h2>Beta Fish</h2>
+<img src="{%static 'img/fish.jpg' %}" style="align: center; height:200px; width:250px; padding:5px">
+</div>-->
+<div class="container">
+  <h2>Beta Fish</h2>
+  <p>The .img-circle class shapes the image to a circle (not available in IE8):</p>
+  <img src="{%static 'img/fish.jpg' %}" class="img-circle" alt="Cinque Terre" width="304" height="236" align="left">
+</div>
+<div class="container">
+  <h2>Button</h2>
+  <p>The .btn-block class makes a block-level button (spans the full width of the parent element):</p>
+  <button type="button" class="btn btn-info btn-block">Block-level Button</button>
+</div>
+<div class="container">
+  <h2>Vertical (basic) Form</h2>
+  <form>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
+{% endblock %}
+

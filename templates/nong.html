@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>농수산물 시장</title>
+    <style>
+        table, th, td {border: 1px solid black; border-collapse:collapse;}
+        th, td { padding: 15px; text-align:center;}
+
+        ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color:#333;
+        }
+
+        li { float: left;}
+
+        li a, .dropbtn {
+        display:inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+        li a:hover, .dropdown:hover .dropbtn { background-color: red;}
+        li .dropdown { display: inline-block; }
+        .dropdown-content{
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index:1;
+        }
+        .dropdown-content a {
+        color: black;
+        padding: 12px 16px
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+        .dropdown-content a:hover { background-color: #f1f1f1;}
+        .dropdown:hover .dropdown-content { display: block;}
+    </style>
+
+</head>
+<body>
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="{%url 'mul' %}">News</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+        <div class="dropdown-content">
+            <a href="#">Link1</a>
+            <a href="{%url 'mul' %}" target="_blank">Link2</a>
+            <a href="#">Link3</a>
+        </div>
+    </li>
+</ul>
+<h1>농수산물 시장</h1>
+<a href="fish.html" target="_blank"><img src="{%static 'img/fish.jpg' %}" style="float:left; height:150px; width:200px; padding:5px"></a>
+Betta fish, also called Siamese fighting fish,<br>
+are small, colorful fish that are native to <br>
+Southeast Asia and common in the pet trade. <br>
+<br><br><br><br><br><br>
+<a href="fruit.html" target="_blank"><img src="{%static 'img/fruit.jpg' %}"  style="float:left; height:150; width:200px; padding:5px"></a>
+<table>
+    <tr>
+        <th>과일 종류</th>
+        <th>가격</th>
+        <th>원산지</th>
+    </tr>
+    <tr>
+        <td>사과</td>
+        <td>500</td>
+        <td>경북</td>
+    </tr>
+    <tr>
+        <td>배</td>
+        <td>700</td>
+        <td>울산</td>
+    </tr>
+    <tr>
+        <td>참외</td>
+        <td>400</td>
+        <td>경주</td>
+    </tr>
+</table>
+농수산물 시장
+</body>
+
+</html>
